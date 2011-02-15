@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SICE" Class="SICEDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=PERSONAL;Initial Catalog=SICE;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SICEConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BITACORA" Member="BITACORAs">
+    <Type Name="BITACORA">
+      <Column Name="BITACORA_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USUARIO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ACCION" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CATEGORIAS" Member="CATEGORIAs">
+    <Type Name="CATEGORIA">
+      <Column Name="CATEGORIA_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="CATEGORIA_PRODUCTO" Member="PRODUCTOs" ThisKey="CATEGORIA_ID" OtherKey="CATEGORIA_ID" Type="PRODUCTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DATOS_FISCALES" Member="DATOS_FISCALEs">
+    <Type Name="DATOS_FISCALE">
+      <Column Name="DATOS_FISCALES_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RFC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RAZON_SOCIAL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="DATOS_FISCALE_USUARIO" Member="USUARIOs" ThisKey="DATOS_FISCALES_ID" OtherKey="DATOS_FISCALES_ID" Type="USUARIO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMPLEADOS" Member="EMPLEADOs">
+    <Type Name="EMPLEADO">
+      <Column Name="EMPLEADOS_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="USUARIO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PUESTO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="USUARIO_EMPLEADO" Member="USUARIO" ThisKey="USUARIO_ID" OtherKey="USUARIO_ID" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMPRESA" Member="EMPRESAs">
+    <Type Name="EMPRESA">
+      <Column Name="EMPRESA_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LOGO" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CEDULA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TELEFONO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CORREO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="USUARIO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="EMPRESA_EMPRESA_EMPLEADO" Member="EMPRESA_EMPLEADOs" ThisKey="EMPRESA_ID" OtherKey="EMPRESA_ID" Type="EMPRESA_EMPLEADO" />
+      <Association Name="EMPRESA_MATRIZ_SUCURSAL" Member="MATRIZ_SUCURSALs" ThisKey="EMPRESA_ID" OtherKey="EMPRESA_ID" Type="MATRIZ_SUCURSAL" />
+      <Association Name="USUARIO_EMPRESA" Member="USUARIO" ThisKey="USUARIO_ID" OtherKey="USUARIO_ID" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMPRESA_EMPLEADOS" Member="EMPRESA_EMPLEADOs">
+    <Type Name="EMPRESA_EMPLEADO">
+      <Column Name="EMPRESA_EMPLEADO_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EMPRESA_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EMPLEADO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="EMPRESA_EMPRESA_EMPLEADO" Member="EMPRESA" ThisKey="EMPRESA_ID" OtherKey="EMPRESA_ID" Type="EMPRESA" IsForeignKey="true" />
+      <Association Name="USUARIO_EMPRESA_EMPLEADO" Member="USUARIO" ThisKey="EMPLEADO_ID" OtherKey="USUARIO_ID" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESTATUS" Member="ESTATUS">
+    <Type Name="ESTATUS">
+      <Column Name="ESTATUS_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="ESTATUS_FACTURA" Member="FACTURAs" ThisKey="ESTATUS_ID" OtherKey="ESTATUS_ID" Type="FACTURA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FACTURA" Member="FACTURAs">
+    <Type Name="FACTURA">
+      <Column Name="FACTURA_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USUARIO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MONEDA_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO_PAGO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FORMA_PAGO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ESTATUS_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FOLIOS_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CADENA_ORIGINAL" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ADUANA_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="FACTURA_FACTURA_DETALLE" Member="FACTURA_DETALLEs" ThisKey="FACTURA_ID" OtherKey="FACTURA_ID" Type="FACTURA_DETALLE" />
+      <Association Name="FACTURA_FACTURA_PRODUCTO" Member="FACTURA_PRODUCTOs" ThisKey="FACTURA_ID" OtherKey="FACURA_ID" Type="FACTURA_PRODUCTO" />
+      <Association Name="ESTATUS_FACTURA" Member="ESTATUS" ThisKey="ESTATUS_ID" OtherKey="ESTATUS_ID" Type="ESTATUS" IsForeignKey="true" />
+      <Association Name="FORMA_PAGO_FACTURA" Member="FORMA_PAGO" ThisKey="FORMA_PAGO_ID" OtherKey="FORMA_PAGO_ID" Type="FORMA_PAGO" IsForeignKey="true" />
+      <Association Name="MONEDA_FACTURA" Member="MONEDA" ThisKey="MONEDA_ID" OtherKey="MONEDA_ID" Type="MONEDA" IsForeignKey="true" />
+      <Association Name="TIPO_PAGO_FACTURA" Member="TIPO_PAGO" ThisKey="TIPO_PAGO_ID" OtherKey="TIPO_PAGO_ID" Type="TIPO_PAGO" IsForeignKey="true" />
+      <Association Name="USUARIO_FACTURA" Member="USUARIO" ThisKey="USUARIO_ID" OtherKey="USUARIO_ID" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FACTURA_DETALLE" Member="FACTURA_DETALLEs">
+    <Type Name="FACTURA_DETALLE">
+      <Column Name="DETALLE_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FACTURA_PRODUCTO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FACTURA_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IMPUESTO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TASA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="FACTURA_FACTURA_DETALLE" Member="FACTURA" ThisKey="FACTURA_ID" OtherKey="FACTURA_ID" Type="FACTURA" IsForeignKey="true" />
+      <Association Name="FACTURA_PRODUCTO_FACTURA_DETALLE" Member="FACTURA_PRODUCTO" ThisKey="FACTURA_PRODUCTO_ID" OtherKey="FACTURA_PRODUCTO_ID" Type="FACTURA_PRODUCTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FACTURA_PRODUCTO" Member="FACTURA_PRODUCTOs">
+    <Type Name="FACTURA_PRODUCTO">
+      <Column Name="FACTURA_PRODUCTO_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FACURA_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CANTIDAD" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="FACTURA_PRODUCTO_FACTURA_DETALLE" Member="FACTURA_DETALLEs" ThisKey="FACTURA_PRODUCTO_ID" OtherKey="FACTURA_PRODUCTO_ID" Type="FACTURA_DETALLE" />
+      <Association Name="FACTURA_FACTURA_PRODUCTO" Member="FACTURA" ThisKey="FACURA_ID" OtherKey="FACTURA_ID" Type="FACTURA" IsForeignKey="true" />
+      <Association Name="PRODUCTO_FACTURA_PRODUCTO" Member="PRODUCTO" ThisKey="PRODUCTO_ID" OtherKey="PRODUCTO_ID" Type="PRODUCTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FORMA_PAGOS" Member="FORMA_PAGOs">
+    <Type Name="FORMA_PAGO">
+      <Column Name="FORMA_PAGO_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="FORMA_PAGO_FACTURA" Member="FACTURAs" ThisKey="FORMA_PAGO_ID" OtherKey="FORMA_PAGO_ID" Type="FACTURA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IMPUESTOS" Member="IMPUESTOs">
+    <Type Name="IMPUESTO">
+      <Column Name="IMPUESTO_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PORCENTAJE" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO_IMPUESTO" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="IMPUESTO_IMPUESTOS_PRODUCTO" Member="IMPUESTOS_PRODUCTOs" ThisKey="IMPUESTO_ID" OtherKey="IMPUESTO_ID" Type="IMPUESTOS_PRODUCTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.IMPUESTOS_PRODUCTOS" Member="IMPUESTOS_PRODUCTOs">
+    <Type Name="IMPUESTOS_PRODUCTO">
+      <Column Name="IMPUESTO_PRODUCTO_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IMPUESTO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PRODUCTO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="IMPUESTO_IMPUESTOS_PRODUCTO" Member="IMPUESTO" ThisKey="IMPUESTO_ID" OtherKey="IMPUESTO_ID" Type="IMPUESTO" IsForeignKey="true" />
+      <Association Name="PRODUCTO_IMPUESTOS_PRODUCTO" Member="PRODUCTO" ThisKey="PRODUCTO_ID" OtherKey="PRODUCTO_ID" Type="PRODUCTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MATRIZ_SUCURSAL" Member="MATRIZ_SUCURSALs">
+    <Type Name="MATRIZ_SUCURSAL">
+      <Column Name="MATRIZ_SUCURSAL_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EMPRESA_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SUCURSAL_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="EMPRESA_MATRIZ_SUCURSAL" Member="EMPRESA" ThisKey="EMPRESA_ID" OtherKey="EMPRESA_ID" Type="EMPRESA" IsForeignKey="true" />
+      <Association Name="USUARIO_MATRIZ_SUCURSAL" Member="USUARIO" ThisKey="SUCURSAL_ID" OtherKey="USUARIO_ID" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MONEDAS" Member="MONEDAs">
+    <Type Name="MONEDA">
+      <Column Name="MONEDA_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="VALOR" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="MONEDA_FACTURA" Member="FACTURAs" ThisKey="MONEDA_ID" OtherKey="MONEDA_ID" Type="FACTURA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCTO_USUARIO" Member="PRODUCTO_USUARIOs">
+    <Type Name="PRODUCTO_USUARIO">
+      <Column Name="PRODUCTO_USUARIO_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PRODUCTO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USUARIO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ULTIMO_PRECIO" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FECHA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PRODUCTO_PRODUCTO_USUARIO" Member="PRODUCTO" ThisKey="PRODUCTO_ID" OtherKey="PRODUCTO_ID" Type="PRODUCTO" IsForeignKey="true" />
+      <Association Name="USUARIO_PRODUCTO_USUARIO" Member="USUARIO" ThisKey="USUARIO_ID" OtherKey="USUARIO_ID" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCTOS" Member="PRODUCTOs">
+    <Type Name="PRODUCTO">
+      <Column Name="PRODUCTO_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CATEGORIA_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="CANTIDAD" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="PRECIO_COMPRA" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="PRECIO_VENTA" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="UNIDAD_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PRODUCTO_FACTURA_PRODUCTO" Member="FACTURA_PRODUCTOs" ThisKey="PRODUCTO_ID" OtherKey="PRODUCTO_ID" Type="FACTURA_PRODUCTO" />
+      <Association Name="PRODUCTO_IMPUESTOS_PRODUCTO" Member="IMPUESTOS_PRODUCTOs" ThisKey="PRODUCTO_ID" OtherKey="PRODUCTO_ID" Type="IMPUESTOS_PRODUCTO" />
+      <Association Name="PRODUCTO_PRODUCTO_USUARIO" Member="PRODUCTO_USUARIOs" ThisKey="PRODUCTO_ID" OtherKey="PRODUCTO_ID" Type="PRODUCTO_USUARIO" />
+      <Association Name="CATEGORIA_PRODUCTO" Member="CATEGORIA" ThisKey="CATEGORIA_ID" OtherKey="CATEGORIA_ID" Type="CATEGORIA" IsForeignKey="true" />
+      <Association Name="UNIDADES_MEDIDA_PRODUCTO" Member="UNIDADES_MEDIDA" ThisKey="UNIDAD_ID" OtherKey="UNIDAD_ID" Type="UNIDADES_MEDIDA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROVEEDORES" Member="PROVEEDOREs">
+    <Type Name="PROVEEDORE">
+      <Column Name="PROVEEDORES_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USUARIO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="USUARIO_PROVEEDORE" Member="USUARIO" ThisKey="USUARIO_ID" OtherKey="USUARIO_ID" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPO_PAGOS" Member="TIPO_PAGOs">
+    <Type Name="TIPO_PAGO">
+      <Column Name="TIPO_PAGO_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TIPO_PAGO_FACTURA" Member="FACTURAs" ThisKey="TIPO_PAGO_ID" OtherKey="TIPO_PAGO_ID" Type="FACTURA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPO_USUARIOS" Member="TIPO_USUARIOs">
+    <Type Name="TIPO_USUARIO">
+      <Column Name="TIPO_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="TIPO_USUARIO_USUARIO" Member="USUARIOs" ThisKey="TIPO_ID" OtherKey="TIPO_ID" Type="USUARIO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UNIDADES_MEDIDAS" Member="UNIDADES_MEDIDAs">
+    <Type Name="UNIDADES_MEDIDA">
+      <Column Name="UNIDAD_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Association Name="UNIDADES_MEDIDA_PRODUCTO" Member="PRODUCTOs" ThisKey="UNIDAD_ID" OtherKey="UNIDAD_ID" Type="PRODUCTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USUARIOS" Member="USUARIOs">
+    <Type Name="USUARIO">
+      <Column Name="USUARIO_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FOTO" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="USERNAME" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="PASSWORD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="APELLIDO_MATERNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="APELLIDO_PATERNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ALIAS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CARGO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EMPRESA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SKYPE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MSN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TELEFONO_PERSONAL" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="CELULAR" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="RADIO" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CALLE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NUM_EXTERNO" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="NUM_INTERNO" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="CODIGO_POSTAL" Type="System.String" DbType="NVarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="COLONIA" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LOCALIDAD" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MUNICIPIO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ESTADO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PAIS" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_NACIMIENTO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GENERO" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ZONA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NUMERO_PLACAS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CLAVE_SICE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CLAVE_PEMEX" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TIPO_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DATOS_FISCALES_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="USUARIO_EMPLEADO" Member="EMPLEADOs" ThisKey="USUARIO_ID" OtherKey="USUARIO_ID" Type="EMPLEADO" />
+      <Association Name="USUARIO_EMPRESA" Member="EMPRESAs" ThisKey="USUARIO_ID" OtherKey="USUARIO_ID" Type="EMPRESA" />
+      <Association Name="USUARIO_EMPRESA_EMPLEADO" Member="EMPRESA_EMPLEADOs" ThisKey="USUARIO_ID" OtherKey="EMPLEADO_ID" Type="EMPRESA_EMPLEADO" />
+      <Association Name="USUARIO_FACTURA" Member="FACTURAs" ThisKey="USUARIO_ID" OtherKey="USUARIO_ID" Type="FACTURA" />
+      <Association Name="USUARIO_MATRIZ_SUCURSAL" Member="MATRIZ_SUCURSALs" ThisKey="USUARIO_ID" OtherKey="SUCURSAL_ID" Type="MATRIZ_SUCURSAL" />
+      <Association Name="USUARIO_PRODUCTO_USUARIO" Member="PRODUCTO_USUARIOs" ThisKey="USUARIO_ID" OtherKey="USUARIO_ID" Type="PRODUCTO_USUARIO" />
+      <Association Name="USUARIO_PROVEEDORE" Member="PROVEEDOREs" ThisKey="USUARIO_ID" OtherKey="USUARIO_ID" Type="PROVEEDORE" />
+      <Association Name="DATOS_FISCALE_USUARIO" Member="DATOS_FISCALE" ThisKey="DATOS_FISCALES_ID" OtherKey="DATOS_FISCALES_ID" Type="DATOS_FISCALE" IsForeignKey="true" />
+      <Association Name="TIPO_USUARIO_USUARIO" Member="TIPO_USUARIO" ThisKey="TIPO_ID" OtherKey="TIPO_ID" Type="TIPO_USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
