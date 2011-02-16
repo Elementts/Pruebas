@@ -1,1 +1,6 @@
 C:\Documents and Settings\Pablo\Escritorio\SICE\SICE\SICE\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Garrison\Desktop\SICE\SICE\SICE\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Garrison\Desktop\SICE\SICE\SICE\bin\SICE.dll
+C:\Users\Garrison\Desktop\SICE\SICE\SICE\bin\SICE.pdb
+C:\Users\Garrison\Desktop\SICE\SICE\SICE\obj\Debug\SICE.dll
+C:\Users\Garrison\Desktop\SICE\SICE\SICE\obj\Debug\SICE.pdb

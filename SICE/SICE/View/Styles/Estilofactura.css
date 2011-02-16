@@ -1,0 +1,10 @@
+/********************** div flotante encima de overlay que carga formularios) **/
+#divbotonesf
+			{   position: fixed;
+				bottom: 0;
+				left: 80;
+				width: 360px;
+				
+	
+    
+			}

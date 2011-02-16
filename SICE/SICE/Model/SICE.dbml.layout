@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 17, 26.5" name="SICE">
+  <DataContextMoniker Name="/SICEDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7018302f-b3ce-45e4-a6b3-29daa9412f79" absoluteBounds="0.75, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SICEDataContext/BITACORA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3fc673de-70ad-4253-9467-6a80be6e7419" absoluteBounds="0.765, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d3a9b7db-4f01-4283-ade6-43897d3fb097" absoluteBounds="6.5, 22.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/SICEDataContext/CATEGORIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26e22640-706e-4a65-acad-b3966ab5588a" absoluteBounds="6.515, 23.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d754c4a-34e2-4a87-81b6-c0ede08ff6dc" absoluteBounds="0.75, 8.875, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/SICEDataContext/DATO_FISCAL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1fded66b-87d9-4632-8898-6c38262ded2a" absoluteBounds="0.765, 9.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d3f87f43-8fa6-4336-9f07-1b49e02aaa84" absoluteBounds="6.25, 8.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/SICEDataContext/EMPLEADO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a8eec6e3-ec6f-40d6-9485-c00a9d48440c" absoluteBounds="6.265, 8.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="82ce2585-1e19-434e-89a6-1c5b736648b3" absoluteBounds="6.25, 13.125, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/SICEDataContext/EMPRESA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46c21eb3-5724-424c-9e9f-5bc9fea76f07" absoluteBounds="6.265, 13.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef82e274-a941-4afb-a135-62cf5580bd8e" absoluteBounds="9, 11.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/SICEDataContext/EMPRESA_EMPLEADO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="718bf0b8-8234-4837-a422-9fc0ce6d90d7" absoluteBounds="9.015, 12.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="83510969-8ff0-4eda-84e8-22dc34e75de0" absoluteBounds="6.5, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/SICEDataContext/ESTADO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f32c28ff-237a-4975-8dd3-8287750d96d2" absoluteBounds="6.515, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81d80950-f609-4796-8832-ce9ee6d353a5" absoluteBounds="9.25, 5.25, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/SICEDataContext/FACTURA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d1124b2-95b0-45cb-9b99-78ff5d8e18cf" absoluteBounds="9.265, 5.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7145eafe-3db3-4c5f-ae47-8f5fe8f4eea2" absoluteBounds="14.75, 5.625, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/SICEDataContext/FACTURA_DETALLE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe60d672-bbc6-4e84-b29e-e0eb2b8ce5e4" absoluteBounds="14.765, 6.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="de7372ec-acbf-4140-9dbc-bc3936703905" absoluteBounds="12, 5.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SICEDataContext/FACTURA_PRODUCTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ed9c776c-750d-4e54-824a-cabcf82c3ba8" absoluteBounds="12.015, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e49c68bd-6318-4574-b394-06011c9e66fc" absoluteBounds="6.5, 16.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/SICEDataContext/FORMA_PAGO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a3dd79f-2425-4e0e-86ae-53e7e54282df" absoluteBounds="6.515, 17.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00d4f8b6-d7ff-4c46-a600-7a3364373ca1" absoluteBounds="9.25, 20.625, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/SICEDataContext/IMPUESTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="921d921d-c2ab-445f-bd04-c88dc50a4bbe" absoluteBounds="9.265, 21.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f0cc1d94-f990-4023-9442-f2c24fd84b3a" absoluteBounds="12, 23.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/SICEDataContext/IMPUESTOS_PRODUCTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea62e8ac-1e0e-460f-bee4-7093e88f18dd" absoluteBounds="12.015, 24.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="316f6ce4-9d45-4350-a572-92c65adc07e3" absoluteBounds="12, 10.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/SICEDataContext/MATRIZ_SUCURSAL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="268f3487-6d50-45ce-bf1f-443e745c8df4" absoluteBounds="12.015, 11.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd3a3ff8-a837-41f8-aed9-2a314a3e449e" absoluteBounds="6.5, 19.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/SICEDataContext/MONEDA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41742fa9-e4dc-428b-92a4-a5477ed4bc5a" absoluteBounds="6.515, 20.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c4d3cf8-3724-496f-97fc-af5867ea90df" absoluteBounds="9.25, 23.375, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/SICEDataContext/PRODUCTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd1ea8f5-6c45-442f-82e8-08f5d7b22d83" absoluteBounds="9.265, 23.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d233db56-6eab-4794-bc2e-5c5b9805bd2d" absoluteBounds="9.25, 8.625, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/SICEDataContext/PRODUCTO_USUARIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea684242-9e44-4331-9a3e-4ac5fac09de3" absoluteBounds="9.265, 9.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="afa7f00b-2840-4187-8d33-ff178f874fb6" absoluteBounds="6.25, 6.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/SICEDataContext/PROVEEDOR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0bc80a85-16dd-4d84-9e30-f7bdbb22dc59" absoluteBounds="6.265, 6.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1921c8a5-fa4a-4bdc-873d-ed94514ea15f" absoluteBounds="6.5, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/SICEDataContext/TIPO_PAGO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b897f30-8eaa-4f4d-9a5e-7d9de9fe5d60" absoluteBounds="6.515, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5c141b9-6d30-457b-bd37-c35a1a1c6f7a" absoluteBounds="0.75, 5.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/SICEDataContext/TIPO_USUARIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7d09e5c-d35e-4be2-9de0-ec1e84db4151" absoluteBounds="0.765, 6.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d41d841-64bd-4d81-a971-f75239df308f" absoluteBounds="6.5, 24.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/SICEDataContext/UNIDADES_MEDIDA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8bac50ca-de39-4050-abad-1b63fb8e3daa" absoluteBounds="6.515, 25.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d4715e4-4ad2-49d5-8f3b-c20216818e2e" absoluteBounds="3.5, 5.875, 2, 7.1553369140624987">
+      <DataClassMoniker Name="/SICEDataContext/USUARIO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c392dcfa-c925-4828-889f-ab87a3d48a23" absoluteBounds="3.515, 6.335, 1.9700000000000002, 6.5953369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 14.11224659375); (8.36979166666667 : 14.11224659375 : JumpStart); (8.53645833333333 : 14.11224659375 : JumpEnd); (8.66666666666667 : 14.11224659375 : JumpStart); (8.83333333333333 : 14.11224659375 : JumpEnd); (10 : 14.11224659375); (10 : 13.1362939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/EMPRESA/EMPRESA_EMPRESA_EMPLEADO" />
+      <nodes>
+        <classShapeMoniker Id="82ce2585-1e19-434e-89a6-1c5b736648b3" />
+        <classShapeMoniker Id="ef82e274-a941-4afb-a135-62cf5580bd8e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 3.94399251302083); (8.40625 : 5.84375); (9.25 : 5.84375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/ESTADO/ESTADO_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="83510969-8ff0-4eda-84e8-22dc34e75de0" />
+        <classShapeMoniker Id="81d80950-f609-4796-8832-ce9ee6d353a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 5.65625); (14.75 : 5.65625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/FACTURA/FACTURA_FACTURA_DETALLE" />
+      <nodes>
+        <classShapeMoniker Id="81d80950-f609-4796-8832-ce9ee6d353a5" />
+        <classShapeMoniker Id="7145eafe-3db3-4c5f-ae47-8f5fe8f4eea2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 6.53929768880208); (14.75 : 6.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/FACTURA_PRODUCTO/FACTURA_PRODUCTO_FACTURA_DETALLE" />
+      <nodes>
+        <classShapeMoniker Id="de7372ec-acbf-4140-9dbc-bc3936703905" />
+        <classShapeMoniker Id="7145eafe-3db3-4c5f-ae47-8f5fe8f4eea2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 6.53929768880208); (12 : 6.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/FACTURA/FACTURA_FACTURA_PRODUCTO" />
+      <nodes>
+        <classShapeMoniker Id="81d80950-f609-4796-8832-ce9ee6d353a5" />
+        <classShapeMoniker Id="de7372ec-acbf-4140-9dbc-bc3936703905" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.453125 : 16.75); (8.453125 : 6.1718775); (9.25 : 6.1718775)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/FORMA_PAGO/FORMA_PAGO_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="e49c68bd-6318-4574-b394-06011c9e66fc" />
+        <classShapeMoniker Id="81d80950-f609-4796-8832-ce9ee6d353a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 21.5104484049479); (11.5416666666667 : 21.5104484049479 : JumpStart); (11.7083333333333 : 21.5104484049479 : JumpEnd); (11.7291666666667 : 21.5104484049479 : JumpStart); (11.8958333333333 : 21.5104484049479 : JumpEnd); (13 : 21.5104484049479); (13 : 23.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/IMPUESTO/IMPUESTO_IMPUESTOS_PRODUCTO" />
+      <nodes>
+        <classShapeMoniker Id="00d4f8b6-d7ff-4c46-a600-7a3364373ca1" />
+        <classShapeMoniker Id="f0cc1d94-f990-4023-9442-f2c24fd84b3a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 13.125); (7.25 : 11.21875); (8.36979166666667 : 11.21875 : JumpStart); (8.53645833333333 : 11.21875 : JumpEnd); (8.66666666666667 : 11.21875 : JumpStart); (8.83333333333333 : 11.21875 : JumpEnd); (11.5416666666667 : 11.21875 : JumpStart); (11.7083333333333 : 11.21875 : JumpEnd); (11.7291666666667 : 11.21875 : JumpStart); (11.8958333333333 : 11.21875 : JumpEnd); (12 : 11.21875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/EMPRESA/EMPRESA_MATRIZ_SUCURSAL" />
+      <nodes>
+        <classShapeMoniker Id="82ce2585-1e19-434e-89a6-1c5b736648b3" />
+        <classShapeMoniker Id="316f6ce4-9d45-4350-a572-92c65adc07e3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 19.875); (7.5 : 18.3862939453125); (8.75 : 18.3862939453125); (8.75 : 7.01224201953125); (9.25 : 7.01224201953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/MONEDA/MONEDA_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="cd3a3ff8-a837-41f8-aed9-2a314a3e449e" />
+        <classShapeMoniker Id="81d80950-f609-4796-8832-ce9ee6d353a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 23.4703836153846); (11.8125 : 22.9078836153846); (11.8125 : 6.96519853320313); (12 : 6.96519853320313)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/PRODUCTO/PRODUCTO_FACTURA_PRODUCTO" />
+      <nodes>
+        <classShapeMoniker Id="6c4d3cf8-3724-496f-97fc-af5867ea90df" />
+        <classShapeMoniker Id="de7372ec-acbf-4140-9dbc-bc3936703905" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 24.5681469726563); (12 : 24.5681469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/PRODUCTO/PRODUCTO_IMPUESTOS_PRODUCTO" />
+      <nodes>
+        <classShapeMoniker Id="6c4d3cf8-3724-496f-97fc-af5867ea90df" />
+        <classShapeMoniker Id="f0cc1d94-f990-4023-9442-f2c24fd84b3a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 23.7556469726563); (9.25 : 23.7556469726563)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/CATEGORIA/CATEGORIA_PRODUCTO" />
+      <nodes>
+        <classShapeMoniker Id="d3a9b7db-4f01-4283-ade6-43897d3fb097" />
+        <classShapeMoniker Id="6c4d3cf8-3724-496f-97fc-af5867ea90df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.2176923076923 : 23.375); (11.625 : 22.9676923076923); (11.625 : 10.7708968098958); (11.25 : 10.3958968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SICEDataContext/PRODUCTO/PRODUCTO_PRODUCTO_USUARIO" />
+      <nodes>
+        <classShapeMoniker Id="6c4d3cf8-3724-496f-97fc-af5867ea90df" />
+        <classShapeMoniker Id="d233db56-6eab-4794-bc2e-5c5b9805bd2d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 1.34699625651042); (10.25 : 1.34699625651042); (10.25 : 5.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/TIPO_PAGO/TIPO_PAGO_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="1921c8a5-fa4a-4bdc-873d-ed94514ea15f" />
+        <classShapeMoniker Id="81d80950-f609-4796-8832-ce9ee6d353a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 25.2989005533854); (9.25 : 25.2989005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/UNIDADES_MEDIDA/UNIDADES_MEDIDA_PRODUCTO" />
+      <nodes>
+        <classShapeMoniker Id="8d41d841-64bd-4d81-a971-f75239df308f" />
+        <classShapeMoniker Id="6c4d3cf8-3724-496f-97fc-af5867ea90df" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.06814697265625); (6.25 : 9.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/USUARIO/USUARIO_EMPLEADO" />
+      <nodes>
+        <classShapeMoniker Id="9d4715e4-4ad2-49d5-8f3b-c20216818e2e" />
+        <classShapeMoniker Id="d3f87f43-8fa6-4336-9f07-1b49e02aaa84" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 13.0303369140625); (4.5 : 14.1065991210937); (6.25 : 14.1065991210937)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/USUARIO/USUARIO_EMPRESA" />
+      <nodes>
+        <classShapeMoniker Id="9d4715e4-4ad2-49d5-8f3b-c20216818e2e" />
+        <classShapeMoniker Id="82ce2585-1e19-434e-89a6-1c5b736648b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 12.3901684570312); (7.16666666666667 : 12.3901684570312 : JumpStart); (7.33333333333333 : 12.3901684570312 : JumpEnd); (8.36979166666667 : 12.3901684570312 : JumpStart); (8.53645833333333 : 12.3901684570312 : JumpEnd); (8.66666666666667 : 12.3901684570312 : JumpStart); (8.83333333333333 : 12.3901684570312 : JumpEnd); (9 : 12.3901684570312)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/USUARIO/USUARIO_EMPRESA_EMPLEADO" />
+      <nodes>
+        <classShapeMoniker Id="9d4715e4-4ad2-49d5-8f3b-c20216818e2e" />
+        <classShapeMoniker Id="ef82e274-a941-4afb-a135-62cf5580bd8e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.96093875); (9.25 : 5.96093875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/USUARIO/USUARIO_FACTURA" />
+      <nodes>
+        <classShapeMoniker Id="9d4715e4-4ad2-49d5-8f3b-c20216818e2e" />
+        <classShapeMoniker Id="81d80950-f609-4796-8832-ce9ee6d353a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.515625); (7.16666666666667 : 11.515625 : JumpStart); (7.33333333333333 : 11.515625 : JumpEnd); (8.36979166666667 : 11.515625 : JumpStart); (8.53645833333333 : 11.515625 : JumpEnd); (8.66666666666667 : 11.515625 : JumpStart); (8.83333333333333 : 11.515625 : JumpEnd); (11.5416666666667 : 11.515625 : JumpStart); (11.7083333333333 : 11.515625 : JumpEnd); (11.7291666666667 : 11.515625 : JumpStart); (11.8958333333333 : 11.515625 : JumpEnd); (12 : 11.515625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/USUARIO/USUARIO_MATRIZ_SUCURSAL" />
+      <nodes>
+        <classShapeMoniker Id="9d4715e4-4ad2-49d5-8f3b-c20216818e2e" />
+        <classShapeMoniker Id="316f6ce4-9d45-4350-a572-92c65adc07e3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.1098453776042); (8.36979166666667 : 10.1098453776042 : JumpStart); (8.53645833333333 : 10.1098453776042 : JumpEnd); (8.66666666666667 : 10.1098453776042 : JumpStart); (8.83333333333333 : 10.1098453776042 : JumpEnd); (9.25 : 10.1098453776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/USUARIO/USUARIO_PRODUCTO_USUARIO" />
+      <nodes>
+        <classShapeMoniker Id="9d4715e4-4ad2-49d5-8f3b-c20216818e2e" />
+        <classShapeMoniker Id="d233db56-6eab-4794-bc2e-5c5b9805bd2d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.09699625651042); (6.25 : 7.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/USUARIO/USUARIO_PROVEEDOR" />
+      <nodes>
+        <classShapeMoniker Id="9d4715e4-4ad2-49d5-8f3b-c20216818e2e" />
+        <classShapeMoniker Id="afa7f00b-2840-4187-8d33-ff178f874fb6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.56814697265625); (3.5 : 9.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/DATO_FISCAL/DATO_FISCAL_USUARIO" />
+      <nodes>
+        <classShapeMoniker Id="1d754c4a-34e2-4a87-81b6-c0ede08ff6dc" />
+        <classShapeMoniker Id="9d4715e4-4ad2-49d5-8f3b-c20216818e2e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.56814697265625); (3.5 : 6.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SICEDataContext/TIPO_USUARIO/TIPO_USUARIO_USUARIO" />
+      <nodes>
+        <classShapeMoniker Id="c5c141b9-6d30-457b-bd37-c35a1a1c6f7a" />
+        <classShapeMoniker Id="9d4715e4-4ad2-49d5-8f3b-c20216818e2e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

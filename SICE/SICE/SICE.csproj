@@ -56,6 +56,62 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="View\images\BannerSICE.jpg" />
+    <Content Include="View\images\Entrar.png" />
+    <Content Include="View\images\esferas\canasta.png" />
+    <Content Include="View\images\esferas\cliente.png" />
+    <Content Include="View\images\esferas\hoja.png" />
+    <Content Include="View\images\esferas\maletin.png" />
+    <Content Include="View\images\esferas\proveedor.png" />
+    <Content Include="View\images\loginfondo.jpg" />
+    <Content Include="View\images\overlay\botoneschicos\archivero70x70.png" />
+    <Content Include="View\images\overlay\botoneschicos\excel70x70.png" />
+    <Content Include="View\images\overlay\botoneschicos\grafico70x70.png" />
+    <Content Include="View\images\overlay\botoneschicos\hoja70x70.png" />
+    <Content Include="View\images\overlay\botoneschicos\lupa70x70.png" />
+    <Content Include="View\images\overlay\fcliente.png" />
+    <Content Include="View\images\overlay\ffactura.png" />
+    <Content Include="View\images\overlay\fmoneda.png" />
+    <Content Include="View\images\overlay\fproductos.png" />
+    <Content Include="View\images\overlay\fproveedor.png" />
+    <Content Include="View\images\recepcion.jpg" />
+    <Content Include="View\images\stack\._Administracion.png" />
+    <Content Include="View\images\stack\._Consultas.png" />
+    <Content Include="View\images\stack\._Evaluaciones.png" />
+    <Content Include="View\images\stack\._Inicio.png" />
+    <Content Include="View\images\stack\._stack.png" />
+    <Content Include="View\images\stack\aaa.png" />
+    <Content Include="View\images\stack\Administracion.png" />
+    <Content Include="View\images\stack\Bolsa1.png" />
+    <Content Include="View\images\stack\Canasta1.png" />
+    <Content Include="View\images\stack\Cliente1.png" />
+    <Content Include="View\images\stack\Consultas.png" />
+    <Content Include="View\images\stack\Evaluaciones.png" />
+    <Content Include="View\images\stack\Hoja1.png" />
+    <Content Include="View\images\stack\Inicio.png" />
+    <Content Include="View\images\stack\Proveedores1.1.png" />
+    <Content Include="View\images\stack\stack.png" />
+    <Content Include="View\js\codigo.js" />
+    <Content Include="View\js\dock.js" />
+    <Content Include="View\js\fisheye-iutil.min.js" />
+    <Content Include="View\js\fisheye.js" />
+    <Content Include="View\js\javas.js" />
+    <Content Include="View\js\jquery-1.4.4.min.js" />
+    <Content Include="View\js\jquery.corner.js" />
+    <Content Include="View\js\jquery.plus.libraries.js" />
+    <Content Include="View\js\layer.js" />
+    <Content Include="View\js\popup.js" />
+    <Content Include="View\js\principal.js" />
+    <Content Include="View\js\pruebajs.js" />
+    <Content Include="View\js\stack.js" />
+    <Content Include="View\js\validator2.js" />
+    <Content Include="View\Styles\Estilo1.css" />
+    <Content Include="View\Styles\EstiloB.css" />
+    <Content Include="View\Styles\Estilofactura.css" />
+    <Content Include="View\Styles\EstiloLogin.css" />
+    <Content Include="View\Styles\EstiloOficina.css" />
+    <Content Include="View\Styles\form.css" />
+    <Content Include="View\Styles\Site.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -69,6 +125,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -106,21 +163,25 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DAL\CategoriaRepositorio.cs" />
-    <Compile Include="DAL\Class1.cs" />
-    <Compile Include="DAL\DatoFiscalRepositorio.cs" />
-    <Compile Include="DAL\EmpresaRepositorio.cs" />
-    <Compile Include="DAL\EstatusRepositorio.cs" />
-    <Compile Include="DAL\FormaPagosRepositorio.cs" />
-    <Compile Include="DAL\ImpuestoRepositorio.cs" />
-    <Compile Include="DAL\IRepositorio.cs" />
-    <Compile Include="DAL\MonedaRepositorio.cs" />
-    <Compile Include="DAL\ProductoRepositorio.cs" />
-    <Compile Include="DAL\SucursalRepositorio.cs" />
-    <Compile Include="DAL\TipoPagoRepositorio.cs" />
-    <Compile Include="DAL\TipoUsuarioRepositorio.cs" />
-    <Compile Include="DAL\UnidadesMedidasRepositorio.cs" />
-    <Compile Include="DAL\UsuarioRepositorio.cs" />
+    <Compile Include="Model\CategoriaRepositorio.cs" />
+    <Compile Include="Model\DatoFiscalRepositorio.cs" />
+    <Compile Include="Model\EmpresaRepositorio.cs" />
+    <Compile Include="Model\EstatusRepositorio.cs" />
+    <Compile Include="Model\FormaPagosRepositorio.cs" />
+    <Compile Include="Model\ImpuestoRepositorio.cs" />
+    <Compile Include="Model\IRepositorio.cs" />
+    <Compile Include="Model\MonedaRepositorio.cs" />
+    <Compile Include="Model\ProductoRepositorio.cs" />
+    <Compile Include="Model\SICE.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SICE.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\SucursalRepositorio.cs" />
+    <Compile Include="Model\TipoPagoRepositorio.cs" />
+    <Compile Include="Model\TipoUsuarioRepositorio.cs" />
+    <Compile Include="Model\UnidadesMedidasRepositorio.cs" />
+    <Compile Include="Model\UsuarioRepositorio.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,17 +193,19 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SICEDataContext.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SICEDataContext.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -157,15 +220,15 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SICEDataContext.dbml">
+    <None Include="Model\SICE.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>SICEDataContext.designer.cs</LastGenOutput>
+      <LastGenOutput>SICE.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SICEDataContext.dbml.layout">
-      <DependentUpon>SICEDataContext.dbml</DependentUpon>
+    <None Include="Model\SICE.dbml.layout">
+      <DependentUpon>SICE.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
